@@ -54,7 +54,7 @@ def preview_report_card(doc):
 		doc.students[0], doc.academic_year, doc.academic_term
 	)
 
-	template = "erpnext/education/doctype/student_report_generation_tool/student_report_generation_tool.html"
+	template = "draerp/education/doctype/student_report_generation_tool/student_report_generation_tool.html"
 	base_template_path = "frappe/www/printview.html"
 
 	from frappe.www.printview import get_letter_head

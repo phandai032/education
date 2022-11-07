@@ -4,7 +4,7 @@
 
 import frappe
 from draerpimport get_default_company
-from erpnext.setup.doctype.holiday_list.holiday_list import is_holiday
+from draerp.setup.doctype.holiday_list.holiday_list import is_holiday
 from frappe import _
 from frappe.model.document import Document
 from frappe.utils import formatdate, get_link_to_form, getdate

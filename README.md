@@ -5,7 +5,7 @@ The Education Domain of DraERPcomes with features to record student info and cou
 
 ### Installation
 
-Using bench, [install ERPNext](https://github.com/frappe/bench#installation) as mentioned here.
+Using bench, [install DraERP](https://github.com/frappe/bench#installation) as mentioned here.
 
 Once DraERPis installed, add education app to your bench by running
 ```sh

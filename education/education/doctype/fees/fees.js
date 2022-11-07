@@ -1,7 +1,7 @@
 // Copyright (c) 2017, Frappe Technologies Pvt. Ltd. and contributors
 // For license information, please see license.txt
 
-frappe.provide("erpnext.accounts.dimensions");
+frappe.provide("draerp.accounts.dimensions");
 
 frappe.ui.form.on("Fees", {
 	setup: function(frm) {
@@ -11,7 +11,7 @@ frappe.ui.form.on("Fees", {
 	},
 
 	company: function(frm) {
-		erpnext.accounts.dimensions.update_dimension(frm, frm.doctype);
+		draerp.accounts.dimensions.update_dimension(frm, frm.doctype);
 	},
 
 	onload: function(frm) {
@@ -51,7 +51,7 @@ frappe.ui.form.on("Fees", {
 			frm.doc.posting_date = frappe.datetime.get_today();
 		}
 
-		erpnext.accounts.dimensions.setup_dimension_filters(frm, frm.doctype);
+		draerp.accounts.dimensions.setup_dimension_filters(frm, frm.doctype);
 	},
 
 	refresh: function(frm) {
@@ -116,7 +116,7 @@ frappe.ui.form.on("Fees", {
 			frappe.msgprint(__("Please set the Email ID for the Student to send the Payment Request"));
 		} else {
 			frappe.call({
-				method:"erpnext.accounts.doctype.payment_request.payment_request.make_payment_request",
+				method:"draerp.accounts.doctype.payment_request.payment_request.make_payment_request",
 				args: {
 					"dt": frm.doc.doctype,
 					"dn": frm.doc.name,
@@ -136,7 +136,7 @@ frappe.ui.form.on("Fees", {
 
 	make_payment_entry: function(frm) {
 		return frappe.call({
-			method: "erpnext.accounts.doctype.payment_entry.payment_entry.get_payment_entry",
+			method: "draerp.accounts.doctype.payment_entry.payment_entry.get_payment_entry",
 			args: {
 				"dt": frm.doc.doctype,
 				"dn": frm.doc.name,

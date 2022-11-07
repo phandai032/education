@@ -11,7 +11,7 @@ app_color = "grey"
 app_email = "hello@frappe.io"
 app_license = "GNU GPL V3"
 
-required_apps = ["erpnext"]
+required_apps = ["draerp"]
 
 # Includes in <head>
 # ------------------

@@ -52,7 +52,7 @@ frappe.ui.form.on('Student Report Generation Tool', {
 	terms: function(frm) {
 		if(frm.doc.terms) {
 			return frappe.call({
-				method: 'erpnext.setup.doctype.terms_and_conditions.terms_and_conditions.get_terms_and_conditions',
+				method: 'draerp.setup.doctype.terms_and_conditions.terms_and_conditions.get_terms_and_conditions',
 				args: {
 					template_name: frm.doc.terms,
 					doc: frm.doc
